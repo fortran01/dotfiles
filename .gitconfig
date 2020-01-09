@@ -82,6 +82,10 @@
 	# Show the user email for the current repository.
 	whoami = config user.email
 
+	# Prem's syncs
+	syncOrigin = !git fetch origin && git rebase origin/master
+	syncUpstream = !git fetch upstream && git rebase upstream/master
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
