@@ -79,6 +79,9 @@
 		fi \
 	}; f"
 
+	syncOrigin = !git fetch origin && git rebase origin/master
+	syncUpstream = !git fetch upstream && git rebase upstream/master
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
