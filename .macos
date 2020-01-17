@@ -94,7 +94,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Change clock format to 24-hour mode
-defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm:ss'
+defaults write com.apple.menuextra.clock DateFormat -string 'EEE MMM d  H:mm'
 
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
