@@ -5,6 +5,12 @@
 # Make sure we’re using the latest Homebrew.
 brew update
 
+# Workaround the following issue
+# ==> Upgrading tfenv 
+# Error: Cannot install tfenv because conflicting formulae are installed.
+# terraform: because tfenv symlinks terraform binaries
+brew unlink terraform
+
 # Upgrade any already-installed formulae.
 brew upgrade
 
