@@ -107,5 +107,8 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
+# my tools
+brew install trash
+
 # Remove outdated versions from the cellar.
 brew cleanup
