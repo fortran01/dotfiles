@@ -15,6 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # My functions                                                                #
 ###############################################################################
+# Thanks: https://stackoverflow.com/a/29436423/422842
 function yes_or_no {
     while true; do
         read -p "$* [y/n]: " yn
@@ -629,7 +630,7 @@ killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null
 # Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
+yes_or_no "Rebuild the index from scratch" && sudo mdutil -E / > /dev/null
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
@@ -937,7 +938,7 @@ defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" \
+yes_or_no "Kill affected applications" && for app in "Activity Monitor" \
 	"Address Book" \
 	"Calendar" \
 	"cfprefsd" \
