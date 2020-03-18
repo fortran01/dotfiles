@@ -109,6 +109,8 @@ brew install zopfli
 
 # my tools
 brew install trash
+brew install imagemagick librsvg # svg to png
+#^ convert -density 300 "x.svg" "x.png"
 
 # Remove outdated versions from the cellar.
 brew cleanup
