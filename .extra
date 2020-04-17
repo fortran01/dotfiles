@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Thanks: https://apple.stackexchange.com/a/231020/64165
 function cask-upgrade() {
     (set -x; brew update;)
 
