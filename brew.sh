@@ -111,6 +111,7 @@ brew install zopfli
 brew install trash
 brew install imagemagick librsvg # svg to png
 #^ convert -density 300 "x.svg" "x.png"
+brew install nvm # node version manager
 
 # Remove outdated versions from the cellar.
 brew cleanup

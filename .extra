@@ -27,3 +27,14 @@ function cask-upgrade() {
         fi
     done
 }
+
+# nvm post-install
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+function tidal-upgrade(){
+    tidal -v
+    curl https://get.tidal.sh/unix | bash 
+    tidal -v
+}
