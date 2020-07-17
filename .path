@@ -1,1 +1,4 @@
 export PATH="$HOME/.tgenv/bin:$PATH"
+
+# For pip3 binaries
+export PATH="/Users/f/Library/Python/3.7/bin:$PATH"
