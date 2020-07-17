@@ -84,7 +84,7 @@
 
 	# Prem's syncs
 	syncOrigin = !git fetch origin && git rebase origin/master
-	syncUpstream = !git fetch upstream && git rebase upstream/master
+	syncUpstream = !git fetch upstream && git rebase upstream/master && git push origin master && git push origin --tags
 
 [apply]
 
